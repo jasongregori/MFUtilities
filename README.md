@@ -1,4 +1,4 @@
-This repository is a set of useful mini frameworks covering a broad range of uses to show you what a mini framework is and why they are useful.
+This repository is a set of useful **iOS** mini frameworks covering a broad range of uses to show you what a mini framework is and why they are useful.
 
 
 Files
