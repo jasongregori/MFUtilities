@@ -5,7 +5,7 @@
 //  Copyright 2011 Jason Gregori. All rights reserved.
 //
 
-// @mf: Gives you the time since a date as a string
+// @mf: Gives you the time since a date as a string; fully and easily customizable
 
 /*
  

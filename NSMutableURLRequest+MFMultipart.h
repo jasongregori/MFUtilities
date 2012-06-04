@@ -5,7 +5,7 @@
 //  Copyright (c) 2011 Jason Gregori. All rights reserved.
 //
 
-// @mf: allows you to easily add multipart data to an NSMutableURLRequest
+// @mf: Allows you to easily add multipart data to an NSMutableURLRequest
 
 /*
  

@@ -5,7 +5,7 @@
 //  Copyright (c) 2012 Jason Gregori. All rights reserved.
 //
 
-// @mf: create urls with query params or get query params from a url
+// @mf: Create urls with query params or get query params from a url
 
 #import <Foundation/Foundation.h>
 

@@ -5,6 +5,8 @@
 //  Copyright (c) 2012 Jason Gregori. All rights reserved.
 //
 
+// @mf: Easily base64 encode strings or data
+
 #import <Foundation/Foundation.h>
 
 @interface MFBase64 : NSObject

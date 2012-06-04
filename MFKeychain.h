@@ -5,7 +5,7 @@
 //  Copyright 2011 Jason Gregori. All rights reserved.
 //
 
-// @mf: Securely stores whatever you want using the Keychain
+// @mf: Easily and securely store whatever you want using the Keychain
 
 /*
  

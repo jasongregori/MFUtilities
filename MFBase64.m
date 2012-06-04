@@ -79,7 +79,7 @@
         str[sindex++] = '=';
     }
     
-	return [[NSString alloc] initWithBytesNoCopy:str length:strlen encoding:NSASCIIStringEncoding freeWhenDone:YES];
+    return [[NSString alloc] initWithBytesNoCopy:str length:strlen encoding:NSASCIIStringEncoding freeWhenDone:YES];
 }
 
 @end
