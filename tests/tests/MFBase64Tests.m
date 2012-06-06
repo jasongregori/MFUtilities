@@ -1,16 +1,16 @@
 //
-//  MFBase64Test.m
+//  MFBase64Tests.m
 //  tests
 //
 //  Created by Jason Gregori on 6/4/12.
 //  Copyright (c) 2012 Jason Gregori. All rights reserved.
 //
 
-#import "MFBase64Test.h"
+#import "MFBase64Tests.h"
 
 #import "MFBase64.h"
 
-@implementation MFBase64Test
+@implementation MFBase64Tests
 
 - (void)testPadding {
     STAssertEqualObjects([MFBase64 encodeString:@""], @"", nil);

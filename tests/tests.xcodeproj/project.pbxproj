@@ -16,14 +16,14 @@
 		79C31579157D8D8E00074E32 /* MFTimeSince.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C31572157D8D8E00074E32 /* MFTimeSince.m */; };
 		79C3157A157D8D8E00074E32 /* NSMutableURLRequest+MFMultipart.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C31574157D8D8E00074E32 /* NSMutableURLRequest+MFMultipart.m */; };
 		79C3157B157D8D8E00074E32 /* NSURL+MFQueryParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C31576157D8D8E00074E32 /* NSURL+MFQueryParams.m */; };
-		79C3157E157D8DDB00074E32 /* MFBase64Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C3157D157D8DDB00074E32 /* MFBase64Test.m */; };
+		79C3157E157D8DDB00074E32 /* MFBase64Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C3157D157D8DDB00074E32 /* MFBase64Tests.m */; };
 		79C31580157D92B700074E32 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C3157F157D92B700074E32 /* Security.framework */; };
 		79C31584157DA3F700074E32 /* Test Image Encoded.txt in Resources */ = {isa = PBXBuildFile; fileRef = 79C31583157DA3F700074E32 /* Test Image Encoded.txt */; };
 		79C31586157DAD1200074E32 /* Test Image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79C31585157DAD1200074E32 /* Test Image.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		79AEF13F157FFD1C00FE41C2 /* NSURL+MFQueryParams+Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSURL+MFQueryParams+Tests.h"; sourceTree = "<group>"; };
+		79AEF13F157FFD1C00FE41C2 /* NSURL+MFQueryParams+Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+MFQueryParams+Tests.h"; sourceTree = "<group>"; };
 		79AEF140157FFD1C00FE41C2 /* NSURL+MFQueryParams+Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+MFQueryParams+Tests.m"; sourceTree = "<group>"; };
 		79C3154B157D8BCC00074E32 /* tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C31556157D8BCC00074E32 /* tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tests-Info.plist"; sourceTree = "<group>"; };
@@ -41,8 +41,8 @@
 		79C31574157D8D8E00074E32 /* NSMutableURLRequest+MFMultipart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableURLRequest+MFMultipart.m"; path = "../NSMutableURLRequest+MFMultipart.m"; sourceTree = "<group>"; };
 		79C31575157D8D8E00074E32 /* NSURL+MFQueryParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+MFQueryParams.h"; path = "../NSURL+MFQueryParams.h"; sourceTree = "<group>"; };
 		79C31576157D8D8E00074E32 /* NSURL+MFQueryParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+MFQueryParams.m"; path = "../NSURL+MFQueryParams.m"; sourceTree = "<group>"; };
-		79C3157C157D8DDB00074E32 /* MFBase64Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFBase64Test.h; sourceTree = "<group>"; };
-		79C3157D157D8DDB00074E32 /* MFBase64Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFBase64Test.m; sourceTree = "<group>"; };
+		79C3157C157D8DDB00074E32 /* MFBase64Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; path = MFBase64Tests.h; sourceTree = "<group>"; };
+		79C3157D157D8DDB00074E32 /* MFBase64Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFBase64Tests.m; sourceTree = "<group>"; };
 		79C3157F157D92B700074E32 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		79C31583157DA3F700074E32 /* Test Image Encoded.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Test Image Encoded.txt"; sourceTree = "<group>"; };
 		79C31585157DAD1200074E32 /* Test Image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Test Image.jpg"; sourceTree = "<group>"; };
@@ -96,8 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				79C31555157D8BCC00074E32 /* Supporting Files */,
-				79C3157C157D8DDB00074E32 /* MFBase64Test.h */,
-				79C3157D157D8DDB00074E32 /* MFBase64Test.m */,
+				79C3157C157D8DDB00074E32 /* MFBase64Tests.h */,
+				79C3157D157D8DDB00074E32 /* MFBase64Tests.m */,
 				79AEF13F157FFD1C00FE41C2 /* NSURL+MFQueryParams+Tests.h */,
 				79AEF140157FFD1C00FE41C2 /* NSURL+MFQueryParams+Tests.m */,
 			);
@@ -217,7 +217,7 @@
 				79C31579157D8D8E00074E32 /* MFTimeSince.m in Sources */,
 				79C3157A157D8D8E00074E32 /* NSMutableURLRequest+MFMultipart.m in Sources */,
 				79C3157B157D8D8E00074E32 /* NSURL+MFQueryParams.m in Sources */,
-				79C3157E157D8DDB00074E32 /* MFBase64Test.m in Sources */,
+				79C3157E157D8DDB00074E32 /* MFBase64Tests.m in Sources */,
 				79AEF141157FFD1C00FE41C2 /* NSURL+MFQueryParams+Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
