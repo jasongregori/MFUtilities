@@ -10,7 +10,7 @@
 #import "limits.h"
 
 @interface MFBase64 ()
-+ (NSString *)__encodeData:(NSData *)data withEncodingTable:(const char *)encodingTable;
++ (NSString *)__encodeData:(NSData *)data withEncodingTable:(const unsigned char *)encodingTable;
 @end
 
 @implementation MFBase64
@@ -20,17 +20,17 @@
 }
 
 + (NSString *)encodeData:(NSData *)data {
-    static const char encodingTable[64] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    static const unsigned char encodingTable[64] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
     return [self __encodeData:data withEncodingTable:encodingTable];
 }
 
 + (NSString *)encodeDataURLSafe:(NSData *)data {
-    static const char encodingTable[64] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_";
+    static const unsigned char encodingTable[64] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_";
     return [self __encodeData:data withEncodingTable:encodingTable];
 }
 
-+ (NSString *)__encodeData:(NSData *)data withEncodingTable:(const char *)encodingTable {
-    const char *bytes = [data bytes];
++ (NSString *)__encodeData:(NSData *)data withEncodingTable:(const unsigned char *)encodingTable {
+    const unsigned char *bytes = [data bytes];
     NSUInteger length = [data length];
     
     int bytesize = CHAR_BIT;
@@ -40,14 +40,14 @@
     int totalBits = length * bytesize;
     // total bits must be divisible by 24 (we add padding if we have less than that)
     int strlen = ceil((double)totalBits/24.0)*24/6;
-    char *str = (char *)malloc(strlen * sizeof(char));
+    unsigned char *str = (unsigned char *)malloc(strlen * sizeof(unsigned char));
 
-    int tindex = 0; // table index
+    unsigned int tindex = 0; // table index
     int sindex = 0; // str index
     int tbitsCaptured = 0; // t index bits captured
     // we are trying to fill indexsize bits into tindex and then capture the corresponding char
     for (int i = 0; i < length; i++) {
-        char byte = bytes[i];
+        unsigned int byte = bytes[i];
 
         int bBitsCaptured = 0; // the number of bits we've captured from byte
         int headBitsToCapture, tailBitsToCapture;
@@ -64,10 +64,8 @@
         } while (tailBitsToCapture >= indexsize);
 
         // capture the remaining bits
-        if (tailBitsToCapture > 0) {
-            tindex = byte;
-            tbitsCaptured = tailBitsToCapture;
-        }
+        tindex = byte;
+        tbitsCaptured = tailBitsToCapture;
     }
     // there could be a partial letter here
     if (tbitsCaptured > 0) {
