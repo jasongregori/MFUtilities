@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79AEF141157FFD1C00FE41C2 /* NSURL+MFQueryParams+Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AEF140157FFD1C00FE41C2 /* NSURL+MFQueryParams+Tests.m */; };
 		79C31567157D8D3D00074E32 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C31566157D8D3D00074E32 /* UIKit.framework */; };
 		79C31569157D8D4300074E32 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C31568157D8D4300074E32 /* Foundation.framework */; };
 		79C3156B157D8D6A00074E32 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C3156A157D8D6A00074E32 /* SenTestingKit.framework */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		79AEF13F157FFD1C00FE41C2 /* NSURL+MFQueryParams+Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSURL+MFQueryParams+Tests.h"; sourceTree = "<group>"; };
+		79AEF140157FFD1C00FE41C2 /* NSURL+MFQueryParams+Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+MFQueryParams+Tests.m"; sourceTree = "<group>"; };
 		79C3154B157D8BCC00074E32 /* tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C31556157D8BCC00074E32 /* tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "tests-Info.plist"; sourceTree = "<group>"; };
 		79C3155D157D8BCC00074E32 /* tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tests-Prefix.pch"; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 				79C31555157D8BCC00074E32 /* Supporting Files */,
 				79C3157C157D8DDB00074E32 /* MFBase64Test.h */,
 				79C3157D157D8DDB00074E32 /* MFBase64Test.m */,
+				79AEF13F157FFD1C00FE41C2 /* NSURL+MFQueryParams+Tests.h */,
+				79AEF140157FFD1C00FE41C2 /* NSURL+MFQueryParams+Tests.m */,
 			);
 			path = tests;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 				79C3157A157D8D8E00074E32 /* NSMutableURLRequest+MFMultipart.m in Sources */,
 				79C3157B157D8D8E00074E32 /* NSURL+MFQueryParams.m in Sources */,
 				79C3157E157D8DDB00074E32 /* MFBase64Test.m in Sources */,
+				79AEF141157FFD1C00FE41C2 /* NSURL+MFQueryParams+Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
