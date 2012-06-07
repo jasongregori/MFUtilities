@@ -57,7 +57,7 @@
     
     // append content disposition
     NSMutableString *cd = [NSMutableString stringWithString:@"Content-Disposition: form-data"];
-    for (NSString *key in contentDisposition) {
+    for (NSString *key in [[contentDisposition allKeys] sortedArrayUsingSelector:@selector(compare:)]) {
         [cd appendFormat:@"; %@=\"%@\"", key, [contentDisposition objectForKey:key]];
     }
     [cd appendString:kNewLine];
@@ -65,7 +65,7 @@
     
     // append headers
     NSMutableString *hs = [NSMutableString string];
-    for (NSString *key in headers) {
+    for (NSString *key in [[headers allKeys] sortedArrayUsingSelector:@selector(compare:)]) {
         [hs appendFormat:@"%@: %@%@", key, [headers objectForKey:key], kNewLine];
     }
     [body appendData:[hs dataUsingEncoding:NSUTF8StringEncoding]];
