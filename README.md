@@ -4,6 +4,8 @@ This repository is a set of useful **iOS** mini frameworks covering a broad rang
 Files
 -----
 
+The iOS mini frameworks have been tested on iOS 4.3 (but should run on 4.0 as well). They also use ARC.
+
 - describe: Describe all mini frameworks in the current directory and all subdirectories
 - MFBase64: Easily base64 encode strings or data
 - MFKeychain: Easily and securely store whatever you want using the Keychain
