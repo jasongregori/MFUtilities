@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7998AED11582FF0B00D0F442 /* MFTimeSinceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7998AED01582FF0B00D0F442 /* MFTimeSinceTests.m */; };
 		79AEF141157FFD1C00FE41C2 /* NSURL+MFQueryParams+Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AEF140157FFD1C00FE41C2 /* NSURL+MFQueryParams+Tests.m */; };
 		79AEF1491580093200FE41C2 /* NSMutableURLRequest+MFMultipart+Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AEF1481580093200FE41C2 /* NSMutableURLRequest+MFMultipart+Tests.m */; };
 		79AEF14B15800B7300FE41C2 /* Test Multipart Name and Type.httpbody in Resources */ = {isa = PBXBuildFile; fileRef = 79AEF14A15800B7300FE41C2 /* Test Multipart Name and Type.httpbody */; };
@@ -28,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7998AECF1582FF0B00D0F442 /* MFTimeSinceTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFTimeSinceTests.h; sourceTree = "<group>"; };
+		7998AED01582FF0B00D0F442 /* MFTimeSinceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFTimeSinceTests.m; sourceTree = "<group>"; };
 		79AEF13F157FFD1C00FE41C2 /* NSURL+MFQueryParams+Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+MFQueryParams+Tests.h"; sourceTree = "<group>"; };
 		79AEF140157FFD1C00FE41C2 /* NSURL+MFQueryParams+Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+MFQueryParams+Tests.m"; sourceTree = "<group>"; };
 		79AEF1471580093200FE41C2 /* NSMutableURLRequest+MFMultipart+Tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+MFMultipart+Tests.h"; sourceTree = "<group>"; };
@@ -109,6 +112,8 @@
 				79C31555157D8BCC00074E32 /* Supporting Files */,
 				79C3157C157D8DDB00074E32 /* MFBase64Tests.h */,
 				79C3157D157D8DDB00074E32 /* MFBase64Tests.m */,
+				7998AECF1582FF0B00D0F442 /* MFTimeSinceTests.h */,
+				7998AED01582FF0B00D0F442 /* MFTimeSinceTests.m */,
 				79AEF1471580093200FE41C2 /* NSMutableURLRequest+MFMultipart+Tests.h */,
 				79AEF1481580093200FE41C2 /* NSMutableURLRequest+MFMultipart+Tests.m */,
 				79AEF13F157FFD1C00FE41C2 /* NSURL+MFQueryParams+Tests.h */,
@@ -241,6 +246,7 @@
 				79C3157E157D8DDB00074E32 /* MFBase64Tests.m in Sources */,
 				79AEF141157FFD1C00FE41C2 /* NSURL+MFQueryParams+Tests.m in Sources */,
 				79AEF1491580093200FE41C2 /* NSMutableURLRequest+MFMultipart+Tests.m in Sources */,
+				7998AED11582FF0B00D0F442 /* MFTimeSinceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
