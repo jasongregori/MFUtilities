@@ -7,18 +7,18 @@
 
 #import "MFTimeSince.h"
 
-@interface __MFTimeSince_Localization : NSObject
-@property (nonatomic, copy) NSString *localization;
+@interface __MFTimeSince_Format : NSObject
+@property (nonatomic, copy) NSString *format;
 @property (nonatomic, assign) NSTimeInterval upto;
 @property (nonatomic, assign) NSTimeInterval secondsInUnit;
 @end
 
 @interface MFTimeSince ()
-@property (nonatomic, strong) NSMutableArray *__localizations;
+@property (nonatomic, strong) NSMutableArray *__formats;
 @end
 
 @implementation MFTimeSince
-@synthesize __localizations;
+@synthesize __formats;
 
 static MFTimeSince *__globalTimeSince = nil;
 + (void)initialize {
@@ -28,8 +28,8 @@ static MFTimeSince *__globalTimeSince = nil;
     });
 }
 
-+ (void)setLocalizationString:(NSString *)localization forUpToThisManyUnits:(double)upto secondsInUnit:(NSUInteger)secondsInUnit {
-    [__globalTimeSince setLocalizationString:localization forUpToThisManyUnits:upto secondsInUnit:secondsInUnit];
++ (void)setFormat:(NSString *)format forUpToThisManyUnits:(double)upto secondsInUnit:(NSUInteger)secondsInUnit {
+    [__globalTimeSince setFormat:format forUpToThisManyUnits:upto secondsInUnit:secondsInUnit];
 }
 
 + (NSString *)timeSince:(NSDate *)date {
@@ -43,21 +43,21 @@ static MFTimeSince *__globalTimeSince = nil;
 - (id)init {
     self = [super init];
     if (self) {
-        self.__localizations = [NSMutableArray array];
+        self.__formats = [NSMutableArray array];
     }
     return self;
 }
 
 
-- (void)setLocalizationString:(NSString *)localization forUpToThisManyUnits:(double)upto secondsInUnit:(NSUInteger)secondsInUnit {
-    __MFTimeSince_Localization *l = [[__MFTimeSince_Localization alloc] init];
-    l.localization = localization;
+- (void)setFormat:(NSString *)format forUpToThisManyUnits:(double)upto secondsInUnit:(NSUInteger)secondsInUnit {
+    __MFTimeSince_Format *l = [[__MFTimeSince_Format alloc] init];
+    l.format = format;
     l.upto = upto * (double)secondsInUnit;
     l.secondsInUnit = secondsInUnit;
     
-    [self.__localizations addObject:l];
+    [self.__formats addObject:l];
     
-    [self.__localizations sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+    [self.__formats sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
         if ([obj1 upto] < [obj2 upto]) {
             return NSOrderedAscending;
         }
@@ -75,26 +75,26 @@ static MFTimeSince *__globalTimeSince = nil;
         interval = 1;
     }
     
-    for (__MFTimeSince_Localization *l in self.__localizations) {
+    for (__MFTimeSince_Format *l in self.__formats) {
         if (interval < l.upto) {
-            return [NSString stringWithFormat:l.localization, (int)(interval/l.secondsInUnit)];
+            return [NSString stringWithFormat:l.format, (int)(interval/l.secondsInUnit)];
         }
     }
     
     // if it didn't match use the last one
-    __MFTimeSince_Localization *l = [self.__localizations lastObject];
-    NSAssert(l, @"MFTimeSince: You have not set and localization strings!");
-    return [NSString stringWithFormat:l.localization, (int)(interval/l.secondsInUnit)];
+    __MFTimeSince_Format *l = [self.__formats lastObject];
+    NSAssert(l, @"MFTimeSince: You have not set any format strings!");
+    return [NSString stringWithFormat:l.format, (int)(interval/l.secondsInUnit)];
 }
 
 @end
 
 
-@implementation __MFTimeSince_Localization
-@synthesize localization, upto, secondsInUnit;
+@implementation __MFTimeSince_Format
+@synthesize format, upto, secondsInUnit;
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"Upto %f seconds, \"%@\"", self.upto, self.localization];
+    return [NSString stringWithFormat:@"Upto %f seconds, \"%@\"", self.upto, self.format];
 }
 
 

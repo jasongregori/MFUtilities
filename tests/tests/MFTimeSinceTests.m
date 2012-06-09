@@ -17,18 +17,18 @@
 - (void)setUp {
     // a good example
     _example = [MFTimeSince new];
-    [_example setLocalizationString:@"now" forUpToThisManyUnits:5 secondsInUnit:60]; // up to 5 minutes
-    [_example setLocalizationString:@"%i minutes" forUpToThisManyUnits:60 secondsInUnit:60]; // up to 60 minutes
-    [_example setLocalizationString:@"1 hour" forUpToThisManyUnits:2 secondsInUnit:60*60]; // up to (but not including) 2 hours
-    [_example setLocalizationString:@"%i hours" forUpToThisManyUnits:24 secondsInUnit:60*60]; // up to 24 hours
-    [_example setLocalizationString:@"1 day" forUpToThisManyUnits:2 secondsInUnit:24*60*60]; // up to (but not including) 2 days
-    [_example setLocalizationString:@"%i days" forUpToThisManyUnits:DBL_MAX secondsInUnit:24*60*60]; // goes forever
+    [_example setFormat:@"now" forUpToThisManyUnits:5 secondsInUnit:60]; // up to 5 minutes
+    [_example setFormat:@"%i minutes" forUpToThisManyUnits:60 secondsInUnit:60]; // up to 60 minutes
+    [_example setFormat:@"1 hour" forUpToThisManyUnits:2 secondsInUnit:60*60]; // up to (but not including) 2 hours
+    [_example setFormat:@"%i hours" forUpToThisManyUnits:24 secondsInUnit:60*60]; // up to 24 hours
+    [_example setFormat:@"1 day" forUpToThisManyUnits:2 secondsInUnit:24*60*60]; // up to (but not including) 2 days
+    [_example setFormat:@"%i days" forUpToThisManyUnits:DBL_MAX secondsInUnit:24*60*60]; // goes forever
 }
 
 
 - (void)testGlobal {
     NSString *string = @"recently";
-    [MFTimeSince setLocalizationString:string forUpToThisManyUnits:FLT_MAX secondsInUnit:1];
+    [MFTimeSince setFormat:string forUpToThisManyUnits:FLT_MAX secondsInUnit:1];
     STAssertEqualObjects([MFTimeSince timeSince:[NSDate date]], string, nil);
 }
 

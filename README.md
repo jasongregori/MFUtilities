@@ -7,7 +7,7 @@ Files
 - describe: Describe all mini frameworks in the current directory and all subdirectories
 - MFBase64: Easily base64 encode strings or data
 - MFKeychain: Easily and securely store whatever you want using the Keychain
-- MFTimeSince: Gives you the time since a date as a string; fully and easily customizable
+- MFTimeSince: Gives you the time passed since a date as a string; fully and easily customizable
 - NSMutableURLRequest+MFMultipart: Allows you to easily add multipart data to an NSMutableURLRequest
 - NSURL+MFQueryParams: Create urls with query params or get query params from a url
 
