@@ -20,13 +20,13 @@
 }
 
 - (void)mfAddMultiPartData:(NSData *)data withName:(NSString *)name filename:(NSString *)filename type:(NSString *)type {
-    NSMutableDictionary *contentDispostion = [NSMutableDictionary dictionary];
-    [contentDispostion setValue:name forKey:@"name"];
-    [contentDispostion setValue:filename forKey:@"filename"];
+    NSMutableDictionary *contentDisposition = [NSMutableDictionary dictionary];
+    [contentDisposition setValue:name forKey:@"name"];
+    [contentDisposition setValue:filename forKey:@"filename"];
     NSMutableDictionary *headers = [NSMutableDictionary dictionary];
     [headers setValue:type forKey:@"Content-Type"];
 
-    [self mfAddMultiPartData:data contentDisposition:contentDispostion headers:headers];
+    [self mfAddMultiPartData:data contentDisposition:contentDisposition headers:headers];
 }
 
 - (void)mfAddMultiPartData:(NSData *)data contentDisposition:(NSDictionary *)contentDisposition headers:(NSDictionary *)headers {
