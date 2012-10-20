@@ -80,7 +80,20 @@ static inline NSString *unescapeString(NSString *string) {
             NSString *key = unescapeString([keyAndObject objectAtIndex:0]);
             NSString *object = unescapeString([keyAndObject objectAtIndex:1]);
             if (key.length && object.length) {
-                [params setValue:object forKey:key];
+                id currentObject = [params objectForKey:key];
+                // check for keys with multiple values
+                if (currentObject) {
+                    if ([currentObject isKindOfClass:[NSMutableArray class]]) {
+                        [currentObject addObject:object];
+                    }
+                    else {
+                        [params setValue:[@[ currentObject, object ] mutableCopy]
+                                  forKey:key];
+                    }
+                }
+                else {
+                    [params setValue:object forKey:key];
+                }
             }
         }
     }

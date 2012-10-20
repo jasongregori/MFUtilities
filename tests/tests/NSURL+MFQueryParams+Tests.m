@@ -34,7 +34,7 @@
                          nil);
 }
 
-- (void)testKeysWithMultipleValues {
+- (void)testCreateWithKeysWithMultipleValues {
     NSString *url = [NSURL mfURLStringWithString:@"http://www.google.com"
                                        andParams:@{ @"key": @[ @1, @3, @2 ] }];
     STAssertEqualObjects(@"http://www.google.com?key=1&key=2&key=3",
@@ -103,6 +103,14 @@
 - (void)testGetUnescapingParams {
     NSDictionary *params = [[NSURL URLWithString:@"http://www.google.com?animals=dogs%20and%20cats"] mfQueryParams];
     NSDictionary *shouldBe = [NSDictionary dictionaryWithObjectsAndKeys:@"dogs and cats", @"animals", nil];
+    STAssertEqualObjects(params,
+                         shouldBe,
+                         nil);
+}
+
+- (void)testGetWithKeysWithMultipleValues {
+    NSDictionary *params = [[NSURL URLWithString:@"http://www.google.com?key=1&key=2&key=3"] mfQueryParams];
+    NSDictionary *shouldBe = @{ @"key": @[ @"1", @"2", @"3" ] };
     STAssertEqualObjects(params,
                          shouldBe,
                          nil);
