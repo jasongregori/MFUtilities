@@ -10,6 +10,9 @@
 /*
  
  - Keys must be NSStrings
+ - Params are converted into NSStrings using `-description`
+ - If a param is an array, the items are converted to NSStrings,
+   sorted, and added as a separate pair with the same key.
  - When creating query params, keys are sorted using `compare:`.
    This way the same url and params always create the same final url.
  

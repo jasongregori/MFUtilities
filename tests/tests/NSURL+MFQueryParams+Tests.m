@@ -29,7 +29,15 @@
                                                   @"4", @"d",
                                                   @"3", @"b",
                                                   nil]];
-    STAssertEqualObjects(@"http://www.google.com?a=2&b=3&c=1&d=4", 
+    STAssertEqualObjects(@"http://www.google.com?a=2&b=3&c=1&d=4",
+                         url,
+                         nil);
+}
+
+- (void)testKeysWithMultipleValues {
+    NSString *url = [NSURL mfURLStringWithString:@"http://www.google.com"
+                                       andParams:@{ @"key": @[ @1, @3, @2 ] }];
+    STAssertEqualObjects(@"http://www.google.com?key=1&key=2&key=3",
                          url,
                          nil);
 }

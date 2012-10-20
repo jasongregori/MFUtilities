@@ -29,7 +29,16 @@ static inline NSString *unescapeString(NSString *string) {
     }
     NSMutableArray *pairs = [NSMutableArray array];
     for (NSString *key in [[params allKeys] sortedArrayUsingSelector:@selector(compare:)]) {
-        [pairs addObject:[NSString stringWithFormat:@"%@=%@", escapeString(key), escapeString([[params objectForKey:key] description])]];
+        id param = [params objectForKey:key];
+        // multiple value keys
+        if ([param isKindOfClass:[NSArray class]]) {
+            for (id item in [[param valueForKey:@"description"] sortedArrayUsingSelector:@selector(compare:)]) {
+                [pairs addObject:[NSString stringWithFormat:@"%@=%@", escapeString(key), escapeString(item)]];
+            }
+        }
+        else {
+            [pairs addObject:[NSString stringWithFormat:@"%@=%@", escapeString(key), escapeString([param description])]];
+        }
     }
     return [NSString stringWithFormat:@"%@%@%@", url, ([url rangeOfString:@"?"].location == NSNotFound ? @"?" : @"&"), [pairs componentsJoinedByString:@"&"]];
 }
