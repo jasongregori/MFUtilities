@@ -19,7 +19,7 @@ static inline NSString *escapeString(NSString *string) {
 
 static inline NSString *unescapeString(NSString *string) {
     return (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapes(NULL,
-                                                                                    (__bridge CFStringRef)string,
+                                                                                    (__bridge CFStringRef)[string stringByReplacingOccurrencesOfString:@"+" withString:@" "],
                                                                                     CFSTR(""));
 }
 

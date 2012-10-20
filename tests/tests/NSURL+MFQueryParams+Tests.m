@@ -101,7 +101,7 @@
 }
 
 - (void)testGetUnescapingParams {
-    NSDictionary *params = [[NSURL URLWithString:@"http://www.google.com?animals=dogs%20and%20cats"] mfQueryParams];
+    NSDictionary *params = [[NSURL URLWithString:@"http://www.google.com?animals=dogs+and%20cats"] mfQueryParams];
     NSDictionary *shouldBe = [NSDictionary dictionaryWithObjectsAndKeys:@"dogs and cats", @"animals", nil];
     STAssertEqualObjects(params,
                          shouldBe,
