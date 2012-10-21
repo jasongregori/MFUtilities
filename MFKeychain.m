@@ -21,6 +21,7 @@
         // first try to straight up add
         OSStatus status = SecItemAdd((__bridge CFDictionaryRef)[NSDictionary dictionaryWithObjectsAndKeys:
                                                                 commonAttributes,
+                                                                kSecAttrAccessibleWhenUnlocked, kSecAttrAccessible,
                                                                 data, kSecValueData,
                                                                 nil],
                                      NULL);
