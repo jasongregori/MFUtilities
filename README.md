@@ -1,4 +1,4 @@
-This is an assortment of iOS [mini framework](https://github.com/jasongregori/mini-frameworks) utilities.
+This is an assortment of iOS [mini framework](http://jasongregori.github.com/mini-frameworks/) utilities.
 
 
 Files
