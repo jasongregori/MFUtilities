@@ -11,17 +11,14 @@
  
  Uses a keyed archiver to turn your object into data.
  Uses your key as the service and your bundle id as the account.
- 
- Tests: I tried creating tests for MFKeychain but it seems like
-     the `SecItem...` functions wouldn't cooperate at least in the simulator.
- 
+  
  */
 
 #import <Foundation/Foundation.h>
 
 @interface MFKeychain : NSObject
 
-+ (BOOL)setObject:(id)object withKey:(NSString *)key;
++ (BOOL)setObject:(id <NSCoding>)object withKey:(NSString *)key;
 + (id)objectForKey:(NSString *)key;
 
 @end

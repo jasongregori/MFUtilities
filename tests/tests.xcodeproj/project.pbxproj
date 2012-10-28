@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		792C4411163CED77001CDDD7 /* MFKeychainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 792C4410163CED77001CDDD7 /* MFKeychainTests.m */; };
 		7998AED11582FF0B00D0F442 /* MFTimeSinceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7998AED01582FF0B00D0F442 /* MFTimeSinceTests.m */; };
 		79C31567157D8D3D00074E32 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C31566157D8D3D00074E32 /* UIKit.framework */; };
 		79C31569157D8D4300074E32 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C31568157D8D4300074E32 /* Foundation.framework */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		792C440F163CED77001CDDD7 /* MFKeychainTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFKeychainTests.h; sourceTree = "<group>"; };
+		792C4410163CED77001CDDD7 /* MFKeychainTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFKeychainTests.m; sourceTree = "<group>"; };
 		7998AECF1582FF0B00D0F442 /* MFTimeSinceTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFTimeSinceTests.h; sourceTree = "<group>"; };
 		7998AED01582FF0B00D0F442 /* MFTimeSinceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFTimeSinceTests.m; sourceTree = "<group>"; };
 		79C3154B157D8BCC00074E32 /* tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				79C31555157D8BCC00074E32 /* Supporting Files */,
+				792C440F163CED77001CDDD7 /* MFKeychainTests.h */,
+				792C4410163CED77001CDDD7 /* MFKeychainTests.m */,
 				7998AECF1582FF0B00D0F442 /* MFTimeSinceTests.h */,
 				7998AED01582FF0B00D0F442 /* MFTimeSinceTests.m */,
 			);
@@ -187,6 +192,7 @@
 				79C31578157D8D8E00074E32 /* MFKeychain.m in Sources */,
 				79C31579157D8D8E00074E32 /* MFTimeSince.m in Sources */,
 				7998AED11582FF0B00D0F442 /* MFTimeSinceTests.m in Sources */,
+				792C4411163CED77001CDDD7 /* MFKeychainTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

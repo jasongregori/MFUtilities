@@ -9,20 +9,21 @@
 
 #import <Security/Security.h>
 
-#define commonAttributes key, kSecAttrService, [[NSBundle mainBundle] bundleIdentifier], kSecAttrAccount, kSecClassGenericPassword, kSecClass
+// NB: bundleIdentifier is nil when running tests, so make sure it is the last item in the dictionary so it ends the dictionary after everything is in
+#define commonAttributes key, kSecAttrService, kSecClassGenericPassword, kSecClass, [[NSBundle mainBundle] bundleIdentifier], kSecAttrAccount
 
 @implementation MFKeychain
 
-+ (BOOL)setObject:(id)object withKey:(NSString *)key {
++ (BOOL)setObject:(id <NSCoding>)object withKey:(NSString *)key {
     if (object) {
         // ## storing data
         NSData *data = [NSKeyedArchiver archivedDataWithRootObject:object];
         
         // first try to straight up add
         OSStatus status = SecItemAdd((__bridge CFDictionaryRef)[NSDictionary dictionaryWithObjectsAndKeys:
-                                                                commonAttributes,
-                                                                kSecAttrAccessibleWhenUnlocked, kSecAttrAccessible,
                                                                 data, kSecValueData,
+                                                                kSecAttrAccessibleWhenUnlocked, kSecAttrAccessible,
+                                                                commonAttributes,
                                                                 nil],
                                      NULL);
         
@@ -50,8 +51,8 @@
 + (id)objectForKey:(NSString *)key {
     CFTypeRef dataRef = NULL;
     OSStatus status = SecItemCopyMatching((__bridge CFDictionaryRef)[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                     (__bridge id)kCFBooleanTrue, kSecReturnData,
                                                                      commonAttributes,
-                                                                     kCFBooleanTrue, kSecReturnData,
                                                                      nil],
                                           &dataRef);
     NSData *data = (__bridge_transfer NSData *)dataRef;
